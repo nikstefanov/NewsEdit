@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Komaks_NewsEdit extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Komaks
+ * @package        Komaks_NewsEdit
+ * @copyright      Copyright (c) 2016
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<widgets>
+    <newsedit_author_view type="komaks_newsedit/author_widget_view" translate="name description" module="komaks_newsedit">
+        <name>Author view</name>
+        <description>Author view widget</description>
+        <is_email_compatible>0</is_email_compatible>
+        <parameters>
+            <author_id type="complex" translate="label">
+                <visible>1</visible>
+                <required>1</required>
+                <label>Author</label>
+                <type>label</type>
+                <helper_block>
+                    <type>komaks_newsedit/adminhtml_author_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Author</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>120</sort_order>
+            </author_id>
+        </parameters>
+    </newsedit_author_view>
+    <newsedit_author_link type="komaks_newsedit/author_widget_link" translate="name description" module="komaks_newsedit">
+        <name>Author link</name>
+        <description>Author link widget</description>
+        <is_email_compatible>0</is_email_compatible>
+        <parameters>
+            <author_id type="complex" translate="label">
+                <visible>1</visible>
+                <required>1</required>
+                <label>Author</label>
+                <type>label</type>
+                <helper_block>
+                    <type>komaks_newsedit/adminhtml_author_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Author</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>130</sort_order>
+            </author_id>
+        </parameters>
+    </newsedit_author_link>
+    <newsedit_article_view type="komaks_newsedit/article_widget_view" translate="name description" module="komaks_newsedit">
+        <name>Article view</name>
+        <description>Article view widget</description>
+        <is_email_compatible>0</is_email_compatible>
+        <parameters>
+            <article_id type="complex" translate="label">
+                <visible>1</visible>
+                <required>1</required>
+                <label>Article</label>
+                <type>label</type>
+                <helper_block>
+                    <type>komaks_newsedit/adminhtml_article_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Article</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>120</sort_order>
+            </article_id>
+        </parameters>
+    </newsedit_article_view>
+    <newsedit_article_link type="komaks_newsedit/article_widget_link" translate="name description" module="komaks_newsedit">
+        <name>Article link</name>
+        <description>Article link widget</description>
+        <is_email_compatible>0</is_email_compatible>
+        <parameters>
+            <article_id type="complex" translate="label">
+                <visible>1</visible>
+                <required>1</required>
+                <label>Article</label>
+                <type>label</type>
+                <helper_block>
+                    <type>komaks_newsedit/adminhtml_article_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Article</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>130</sort_order>
+            </article_id>
+        </parameters>
+    </newsedit_article_link>
+    <newsedit_section_view type="komaks_newsedit/section_widget_view" translate="name description" module="komaks_newsedit">
+        <name>Section view</name>
+        <description>Section view widget</description>
+        <is_email_compatible>0</is_email_compatible>
+        <parameters>
+            <section_id type="complex" translate="label">
+                <visible>1</visible>
+                <required>1</required>
+                <label>Section</label>
+                <type>label</type>
+                <helper_block>
+                    <type>komaks_newsedit/adminhtml_section_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Section</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>120</sort_order>
+            </section_id>
+        </parameters>
+    </newsedit_section_view>
+    <newsedit_section_link type="komaks_newsedit/section_widget_link" translate="name description" module="komaks_newsedit">
+        <name>Section link</name>
+        <description>Section link widget</description>
+        <is_email_compatible>0</is_email_compatible>
+        <parameters>
+            <section_id type="complex" translate="label">
+                <visible>1</visible>
+                <required>1</required>
+                <label>Section</label>
+                <type>label</type>
+                <helper_block>
+                    <type>komaks_newsedit/adminhtml_section_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Section</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>130</sort_order>
+            </section_id>
+        </parameters>
+    </newsedit_section_link>
+    <newsedit_section_subtree type="komaks_newsedit/section_widget_subtree" translate="name description" module="komaks_newsedit">
+        <name>Section subtree</name>
+        <description>Section subtree widget</description>
+        <is_email_compatible>0</is_email_compatible>
+        <parameters>
+            <section_id type="complex" translate="label">
+                <visible>1</visible>
+                <required>1</required>
+                <label>Section</label>
+                <type>label</type>
+                <helper_block>
+                    <type>komaks_newsedit/adminhtml_section_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Section</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>10</sort_order>
+            </section_id>
+            <recursion type="complex" translate="label">
+                <visible>1</visible>
+                <required>1</required>
+                <value>0</value>
+                <label>Levels to show (0 for all)</label>
+                <type>text</type>
+                <sort_order>20</sort_order>
+            </recursion>
+        </parameters>
+    </newsedit_section_subtree>
+</widgets>

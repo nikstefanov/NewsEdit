@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Komaks_NewsEdit extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Komaks
+ * @package        Komaks_NewsEdit
+ * @copyright      Copyright (c) 2016
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <komaks_newsedit translate="title" module="komaks_newsedit">
+                                        <title>NewsEdit</title>
+                                    </komaks_newsedit>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <cms>
+                        <children>
+                            <komaks_newsedit translate="title" module="komaks_newsedit">
+                                <title>News</title>
+                                <children>
+                                    <author translate="title" module="komaks_newsedit">
+                                        <title>Author</title>
+                                        <sort_order>0</sort_order>
+                                    </author>
+                                    <article translate="title" module="komaks_newsedit">
+                                        <title>Article</title>
+                                        <sort_order>10</sort_order>
+                                    </article>
+                                    <article_comments translate="title" module="komaks_newsedit">
+                                        <title>Manage Article Comments</title>
+                                        <sort_order>15</sort_order>
+                                    </article_comments>
+                                    <article_attributes translate="title" module="komaks_newsedit">
+                                        <title>Manage Article attributes</title>
+                                        <sort_order>17</sort_order>
+                                    </article_attributes>
+                                    <section translate="title" module="komaks_newsedit">
+                                        <title>Section</title>
+                                        <sort_order>20</sort_order>
+                                    </section>
+                                    <section_comments translate="title" module="komaks_newsedit">
+                                        <title>Manage Section Comments</title>
+                                        <sort_order>25</sort_order>
+                                    </section_comments>
+                                    <section_attributes translate="title" module="komaks_newsedit">
+                                        <title>Manage Section attributes</title>
+                                        <sort_order>27</sort_order>
+                                    </section_attributes>
+                                </children>
+                            </komaks_newsedit>                        </children>
+                    </cms>
+
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <cms>
+            <children>
+                <komaks_newsedit translate="title" module="komaks_newsedit">
+                    <title>News</title>
+                    <sort_order>12</sort_order>
+                    <children>
+                        <author translate="title" module="komaks_newsedit">
+                            <title>Author</title>
+                            <action>adminhtml/newsedit_author</action>
+                            <sort_order>0</sort_order>
+                        </author>
+                        <article translate="title" module="komaks_newsedit">
+                            <title>Article</title>
+                            <action>adminhtml/newsedit_article</action>
+                            <sort_order>10</sort_order>
+                        </article>
+                        <article_comments translate="title" module="komaks_newsedit">
+                            <title>Manage Article Comments</title>
+                            <action>adminhtml/newsedit_article_comment</action>
+                            <sort_order>14</sort_order>
+                        </article_comments>
+                        <article_attributes translate="title" module="komaks_newsedit">
+                            <title>Manage Article Attributes</title>
+                            <action>adminhtml/newsedit_article_attribute</action>
+                            <sort_order>17</sort_order>
+                        </article_attributes>
+                        <section translate="title" module="komaks_newsedit">
+                            <title>Section</title>
+                            <action>adminhtml/newsedit_section</action>
+                            <sort_order>20</sort_order>
+                        </section>
+                        <section_comments translate="title" module="komaks_newsedit">
+                            <title>Manage Section Comments</title>
+                            <action>adminhtml/newsedit_section_comment</action>
+                            <sort_order>24</sort_order>
+                        </section_comments>
+                        <section_attributes translate="title" module="komaks_newsedit">
+                            <title>Manage Section Attributes</title>
+                            <action>adminhtml/newsedit_section_attribute</action>
+                            <sort_order>27</sort_order>
+                        </section_attributes>
+                    </children>
+                </komaks_newsedit>            </children>
+        </cms>
+
+    </menu>
+</config>

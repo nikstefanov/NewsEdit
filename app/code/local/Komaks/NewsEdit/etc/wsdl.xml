@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:typens="urn:{{var wsdl.name}}" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/"
+    name="{{var wsdl.name}}" targetNamespace="urn:{{var wsdl.name}}">
+    <types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:Magento">
+            <import namespace="http://schemas.xmlsoap.org/soap/encoding/" schemaLocation="http://schemas.xmlsoap.org/soap/encoding/" />
+            <complexType name="newseditAuthorListEntity">
+                <all>
+                    <element name="entity_id" type="xsd:string" minOccurs="1" />
+                    <element name="name" type="xsd:string" minOccurs="1" />
+                    <element name="description" type="xsd:string" minOccurs="1" />
+                    <element name="email" type="xsd:string" minOccurs="1" />
+                    <element name="status" type="xsd:string" minOccurs="0" />
+                    <element name="url_key" type="xsd:string" minOccurs="0" />
+                    <element name="in_rss" type="xsd:string" minOccurs="0" />
+                    <element name="meta_title" type="xsd:string" minOccurs="0" />
+                    <element name="meta_keywords" type="xsd:string" minOccurs="0" />
+                    <element name="meta_description" type="xsd:string" minOccurs="0" />
+
+                    <element name="created_at" type="xsd:string" minOccurs="1" />
+                    <element name="updated_at" type="xsd:string" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="newseditAuthorListEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:newseditAuthorListEntity[]" />
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="newseditAuthorAddEntity">
+                <all>
+                    <element name="name" type="xsd:string" minOccurs="1" />
+                    <element name="description" type="xsd:string" minOccurs="1" />
+                    <element name="email" type="xsd:string" minOccurs="1" />
+                    <element name="status" type="xsd:string" minOccurs="0" />
+                    <element name="url_key" type="xsd:string" minOccurs="0" />
+                    <element name="in_rss" type="xsd:string" minOccurs="0" />
+                    <element name="meta_title" type="xsd:string" minOccurs="0" />
+                    <element name="meta_keywords" type="xsd:string" minOccurs="0" />
+                    <element name="meta_description" type="xsd:string" minOccurs="0" />
+
+                </all>
+            </complexType>
+            <complexType name="newseditAuthorUpdateEntity">
+                <all>
+                    <element name="name" type="xsd:string" minOccurs="1" />
+                    <element name="description" type="xsd:string" minOccurs="1" />
+                    <element name="email" type="xsd:string" minOccurs="1" />
+                    <element name="status" type="xsd:string" minOccurs="0" />
+                    <element name="url_key" type="xsd:string" minOccurs="0" />
+                    <element name="in_rss" type="xsd:string" minOccurs="0" />
+                    <element name="meta_title" type="xsd:string" minOccurs="0" />
+                    <element name="meta_keywords" type="xsd:string" minOccurs="0" />
+                    <element name="meta_description" type="xsd:string" minOccurs="0" />
+
+                </all>
+            </complexType>
+            <complexType name="newseditAuthorInfoEntity">
+                <all>
+                    <element name="entity_id" type="xsd:string" minOccurs="1" />
+                    <element name="name" type="xsd:string" minOccurs="1" />
+                    <element name="description" type="xsd:string" minOccurs="1" />
+                    <element name="email" type="xsd:string" minOccurs="1" />
+                    <element name="status" type="xsd:string" minOccurs="0" />
+                    <element name="url_key" type="xsd:string" minOccurs="0" />
+                    <element name="in_rss" type="xsd:string" minOccurs="0" />
+                    <element name="meta_title" type="xsd:string" minOccurs="0" />
+                    <element name="meta_keywords" type="xsd:string" minOccurs="0" />
+                    <element name="meta_description" type="xsd:string" minOccurs="0" />
+
+                    <element name="created_at" type="xsd:string" minOccurs="1" />
+                    <element name="updated_at" type="xsd:string" minOccurs="1" />
+                </all>
+            </complexType>
+                    <complexType name="newseditArticleListEntity">
+                <all>
+                    <element name="entity_id" type="xsd:string" minOccurs="1" />
+                    <element name="author_id" type="xsd:string" minOccurs="0" />
+                    <element name="title" type="xsd:string" minOccurs="1" />
+                    <element name="teaser" type="xsd:string" minOccurs="1" />
+                    <element name="content" type="xsd:string" minOccurs="1" />
+                    <element name="publication_date" type="xsd:string" minOccurs="1" />
+                    <element name="image" type="xsd:string" minOccurs="0" />
+                    <element name="status" type="xsd:string" minOccurs="0" />
+                    <element name="url_key" type="xsd:string" minOccurs="0" />
+                    <element name="in_rss" type="xsd:string" minOccurs="0" />
+                    <element name="meta_title" type="xsd:string" minOccurs="0" />
+                    <element name="meta_keywords" type="xsd:string" minOccurs="0" />
+                    <element name="meta_description" type="xsd:string" minOccurs="0" />
+                    <element name="allow_comment" type="xsd:string" minOccurs="0" />
+                    <element name="additional_attributes" type="typens:newseditArticleAdditionalAttributesEntity" minOccurs="0"/>
+
+                    <element name="created_at" type="xsd:string" minOccurs="1" />
+                    <element name="updated_at" type="xsd:string" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="newseditArticleListEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:newseditArticleListEntity[]" />
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="newseditArticleAddEntity">
+                <all>
+                    <element name="author_id" type="xsd:string" minOccurs="0" />
+                    <element name="title" type="xsd:string" minOccurs="1" />
+                    <element name="teaser" type="xsd:string" minOccurs="1" />
+                    <element name="content" type="xsd:string" minOccurs="1" />
+                    <element name="publication_date" type="xsd:string" minOccurs="1" />
+                    <element name="image" type="xsd:string" minOccurs="0" />
+                    <element name="status" type="xsd:string" minOccurs="0" />
+                    <element name="url_key" type="xsd:string" minOccurs="0" />
+                    <element name="in_rss" type="xsd:string" minOccurs="0" />
+                    <element name="meta_title" type="xsd:string" minOccurs="0" />
+                    <element name="meta_keywords" type="xsd:string" minOccurs="0" />
+                    <element name="meta_description" type="xsd:string" minOccurs="0" />
+                    <element name="allow_comment" type="xsd:string" minOccurs="0" />
+                    <element name="additional_attributes" type="typens:newseditArticleAdditionalAttributesEntity" minOccurs="0"/>
+
+                </all>
+            </complexType>
+            <complexType name="newseditArticleUpdateEntity">
+                <all>
+                    <element name="author_id" type="xsd:string" minOccurs="0" />
+                    <element name="title" type="xsd:string" minOccurs="1" />
+                    <element name="teaser" type="xsd:string" minOccurs="1" />
+                    <element name="content" type="xsd:string" minOccurs="1" />
+                    <element name="publication_date" type="xsd:string" minOccurs="1" />
+                    <element name="image" type="xsd:string" minOccurs="0" />
+                    <element name="status" type="xsd:string" minOccurs="0" />
+                    <element name="url_key" type="xsd:string" minOccurs="0" />
+                    <element name="in_rss" type="xsd:string" minOccurs="0" />
+                    <element name="meta_title" type="xsd:string" minOccurs="0" />
+                    <element name="meta_keywords" type="xsd:string" minOccurs="0" />
+                    <element name="meta_description" type="xsd:string" minOccurs="0" />
+                    <element name="allow_comment" type="xsd:string" minOccurs="0" />
+                    <element name="additional_attributes" type="typens:newseditArticleAdditionalAttributesEntity" minOccurs="0"/>
+
+                </all>
+            </complexType>
+            <complexType name="newseditArticleInfoEntity">
+                <all>
+                    <element name="entity_id" type="xsd:string" minOccurs="1" />
+                    <element name="author_id" type="xsd:string" minOccurs="0" />
+                    <element name="title" type="xsd:string" minOccurs="1" />
+                    <element name="teaser" type="xsd:string" minOccurs="1" />
+                    <element name="content" type="xsd:string" minOccurs="1" />
+                    <element name="publication_date" type="xsd:string" minOccurs="1" />
+                    <element name="image" type="xsd:string" minOccurs="0" />
+                    <element name="status" type="xsd:string" minOccurs="0" />
+                    <element name="url_key" type="xsd:string" minOccurs="0" />
+                    <element name="in_rss" type="xsd:string" minOccurs="0" />
+                    <element name="meta_title" type="xsd:string" minOccurs="0" />
+                    <element name="meta_keywords" type="xsd:string" minOccurs="0" />
+                    <element name="meta_description" type="xsd:string" minOccurs="0" />
+                    <element name="allow_comment" type="xsd:string" minOccurs="0" />
+                    <element name="additional_attributes" type="typens:newseditArticleAdditionalAttributesEntity" minOccurs="0"/>
+
+                    <element name="created_at" type="xsd:string" minOccurs="1" />
+                    <element name="updated_at" type="xsd:string" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="newseditArticleAssignProductEntity">
+                <all>
+                <element name="articleId" type="xsd:string" minOccurs="1" />
+                <element name="productId" type="xsd:string" minOccurs="1" />
+                <element name="position" type="xsd:string" minOccurs="0" />
+                </all>
+            </complexType>
+            <complexType name="newseditArticleUnassignProductEntity">
+                <all>
+                <element name="articleId" type="xsd:string" minOccurs="1" />
+                <element name="productId" type="xsd:string" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="newseditArticleAssignCategoryEntity">
+                <all>
+                <element name="articleId" type="xsd:string" minOccurs="1" />
+                <element name="categoryId" type="xsd:string" minOccurs="1" />
+                <element name="position" type="xsd:string" minOccurs="0" />
+                </all>
+            </complexType>
+            <complexType name="newseditArticleUnassignCategoryEntity">
+                <all>
+                <element name="articleId" type="xsd:string" minOccurs="1" />
+                <element name="categoryId" type="xsd:string" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="newseditArticleAssignSectionEntity">
+                <all>
+                <element name="articleId" type="xsd:string" minOccurs="1" />
+                <element name="sectionId" type="xsd:string" minOccurs="1" />
+                <element name="position" type="xsd:string" minOccurs="0" />
+                </all>
+            </complexType>
+            <complexType name="newseditArticleUnassignSectionEntity">
+                <all>
+                <element name="articleId" type="xsd:string" minOccurs="1" />
+                <element name="sectionId" type="xsd:string" minOccurs="1" />
+                </all>
+            </complexType>
+                    <complexType name="newseditSectionListEntity">
+                <all>
+                    <element name="entity_id" type="xsd:string" minOccurs="1" />
+                    <element name="name" type="xsd:string" minOccurs="1" />
+                    <element name="description" type="xsd:string" minOccurs="0" />
+                    <element name="status" type="xsd:string" minOccurs="0" />
+                    <element name="url_key" type="xsd:string" minOccurs="0" />
+                    <element name="parent_id" type="xsd:string" minOccurs="0" />
+                    <element name="path" type="xsd:string" minOccurs="0" />
+                    <element name="position" type="xsd:string" minOccurs="0" />
+                    <element name="level" type="xsd:string" minOccurs="0" />
+                    <element name="children_count" type="xsd:string" minOccurs="0" />
+                    <element name="in_rss" type="xsd:string" minOccurs="0" />
+                    <element name="meta_title" type="xsd:string" minOccurs="0" />
+                    <element name="meta_keywords" type="xsd:string" minOccurs="0" />
+                    <element name="meta_description" type="xsd:string" minOccurs="0" />
+                    <element name="allow_comment" type="xsd:string" minOccurs="0" />
+                    <element name="additional_attributes" type="typens:newseditSectionAdditionalAttributesEntity" minOccurs="0"/>
+
+                    <element name="created_at" type="xsd:string" minOccurs="1" />
+                    <element name="updated_at" type="xsd:string" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="newseditSectionListEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:newseditSectionListEntity[]" />
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="newseditSectionAddEntity">
+                <all>
+                    <element name="name" type="xsd:string" minOccurs="1" />
+                    <element name="description" type="xsd:string" minOccurs="0" />
+                    <element name="status" type="xsd:string" minOccurs="0" />
+                    <element name="url_key" type="xsd:string" minOccurs="0" />
+                    <element name="parent_id" type="xsd:string" minOccurs="0" />
+                    <element name="in_rss" type="xsd:string" minOccurs="0" />
+                    <element name="meta_title" type="xsd:string" minOccurs="0" />
+                    <element name="meta_keywords" type="xsd:string" minOccurs="0" />
+                    <element name="meta_description" type="xsd:string" minOccurs="0" />
+                    <element name="allow_comment" type="xsd:string" minOccurs="0" />
+                    <element name="additional_attributes" type="typens:newseditSectionAdditionalAttributesEntity" minOccurs="0"/>
+
+                </all>
+            </complexType>
+            <complexType name="newseditSectionUpdateEntity">
+                <all>
+                    <element name="name" type="xsd:string" minOccurs="1" />
+                    <element name="description" type="xsd:string" minOccurs="0" />
+                    <element name="status" type="xsd:string" minOccurs="0" />
+                    <element name="url_key" type="xsd:string" minOccurs="0" />
+                    <element name="parent_id" type="xsd:string" minOccurs="0" />
+                    <element name="in_rss" type="xsd:string" minOccurs="0" />
+                    <element name="meta_title" type="xsd:string" minOccurs="0" />
+                    <element name="meta_keywords" type="xsd:string" minOccurs="0" />
+                    <element name="meta_description" type="xsd:string" minOccurs="0" />
+                    <element name="allow_comment" type="xsd:string" minOccurs="0" />
+                    <element name="additional_attributes" type="typens:newseditSectionAdditionalAttributesEntity" minOccurs="0"/>
+
+                </all>
+            </complexType>
+            <complexType name="newseditSectionInfoEntity">
+                <all>
+                    <element name="entity_id" type="xsd:string" minOccurs="1" />
+                    <element name="name" type="xsd:string" minOccurs="1" />
+                    <element name="description" type="xsd:string" minOccurs="0" />
+                    <element name="status" type="xsd:string" minOccurs="0" />
+                    <element name="url_key" type="xsd:string" minOccurs="0" />
+                    <element name="parent_id" type="xsd:string" minOccurs="0" />
+                    <element name="path" type="xsd:string" minOccurs="0" />
+                    <element name="position" type="xsd:string" minOccurs="0" />
+                    <element name="level" type="xsd:string" minOccurs="0" />
+                    <element name="children_count" type="xsd:string" minOccurs="0" />
+                    <element name="in_rss" type="xsd:string" minOccurs="0" />
+                    <element name="meta_title" type="xsd:string" minOccurs="0" />
+                    <element name="meta_keywords" type="xsd:string" minOccurs="0" />
+                    <element name="meta_description" type="xsd:string" minOccurs="0" />
+                    <element name="allow_comment" type="xsd:string" minOccurs="0" />
+                    <element name="additional_attributes" type="typens:newseditSectionAdditionalAttributesEntity" minOccurs="0"/>
+
+                    <element name="created_at" type="xsd:string" minOccurs="1" />
+                    <element name="updated_at" type="xsd:string" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="newseditSectionMoveEntity">
+                <all>
+                <element name="section_id" type="xsd:string" minOccurs="1" />
+                <element name="parent_id" type="xsd:string" minOccurs="1" />
+                <element name="after_id" type="xsd:string" minOccurs="0" />
+                </all>
+            </complexType>
+            <complexType name="newseditSectionAssignProductEntity">
+                <all>
+                <element name="sectionId" type="xsd:string" minOccurs="1" />
+                <element name="productId" type="xsd:string" minOccurs="1" />
+                <element name="position" type="xsd:string" minOccurs="0" />
+                </all>
+            </complexType>
+            <complexType name="newseditSectionUnassignProductEntity">
+                <all>
+                <element name="sectionId" type="xsd:string" minOccurs="1" />
+                <element name="productId" type="xsd:string" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="newseditSectionAssignCategoryEntity">
+                <all>
+                <element name="sectionId" type="xsd:string" minOccurs="1" />
+                <element name="categoryId" type="xsd:string" minOccurs="1" />
+                <element name="position" type="xsd:string" minOccurs="0" />
+                </all>
+            </complexType>
+            <complexType name="newseditSectionUnassignCategoryEntity">
+                <all>
+                <element name="sectionId" type="xsd:string" minOccurs="1" />
+                <element name="categoryId" type="xsd:string" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="newseditSectionAssignArticleEntity">
+                <all>
+                <element name="sectionId" type="xsd:string" minOccurs="1" />
+                <element name="articleId" type="xsd:string" minOccurs="1" />
+                <element name="position" type="xsd:string" minOccurs="0" />
+                </all>
+            </complexType>
+            <complexType name="newseditSectionUnassignArticleEntity">
+                <all>
+                <element name="sectionId" type="xsd:string" minOccurs="1" />
+                <element name="articleId" type="xsd:string" minOccurs="1" />
+                </all>
+            </complexType>
+                    <complexType name="newseditArticleCommentListEntity">
+                <all>
+                    <element name="comment_id" type="xsd:string" minOccurs="1" />
+                    <element name="article_id" type="xsd:string" minOccurs="1" />
+                    <element name="title" type="xsd:string" minOccurs="1" />
+                    <element name="comment" type="xsd:string" minOccurs="1" />
+                    <element name="status" type="xsd:string" minOccurs="1" />
+                    <element name="customer_id" type="xsd:string" minOccurs="1" />
+                    <element name="name" type="xsd:string" minOccurs="1" />
+                    <element name="email" type="xsd:string" minOccurs="1" />
+                    <element name="created_at" type="xsd:string" minOccurs="1" />
+                    <element name="updated_at" type="xsd:string" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="newseditArticleCommentListEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:newseditArticleCommentListEntity[]" />
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="newseditSectionCommentListEntity">
+                <all>
+                    <element name="comment_id" type="xsd:string" minOccurs="1" />
+                    <element name="section_id" type="xsd:string" minOccurs="1" />
+                    <element name="title" type="xsd:string" minOccurs="1" />
+                    <element name="comment" type="xsd:string" minOccurs="1" />
+                    <element name="status" type="xsd:string" minOccurs="1" />
+                    <element name="customer_id" type="xsd:string" minOccurs="1" />
+                    <element name="name" type="xsd:string" minOccurs="1" />
+                    <element name="email" type="xsd:string" minOccurs="1" />
+                    <element name="created_at" type="xsd:string" minOccurs="1" />
+                    <element name="updated_at" type="xsd:string" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="newseditSectionCommentListEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:newseditSectionCommentListEntity[]" />
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="newseditArticleAdditionalAttributesEntity">
+                <all>
+                    <element name="multi_data" type="typens:associativeMultiArray" minOccurs="0" />
+                    <element name="single_data" type="typens:associativeArray" minOccurs="0" />
+                </all>
+            </complexType>
+            <complexType name="newseditArticleAttributeOptionEntity">
+                <all>
+                    <element name="label" type="xsd:string"/>
+                    <element name="value" type="xsd:string"/>
+                </all>
+            </complexType>
+            <complexType name="newseditArticleAttributeOptionEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:newseditArticleAttributeOptionEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="newseditArticleAttributeOptionLabelEntity">
+                <all>
+                    <element name="store_id" type="typens:ArrayOfString" />
+                    <element name="value" type="xsd:string" />
+                </all>
+            </complexType>
+            <complexType name="newseditArticleAttributeOptionLabelArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:newseditArticleAttributeOptionLabelEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="newseditArticleRequestAttributes">
+                <all>
+                    <element name="attributes" type="typens:ArrayOfString" minOccurs="0"/>
+                    <element name="additional_attributes" type="typens:ArrayOfString" minOccurs="0"/>
+                </all>
+            </complexType>
+            <complexType name="newseditArticleAttributeFrontendLabelEntity">
+                <all>
+                    <element name="store_id" type="xsd:string" />
+                    <element name="label" type="xsd:string" />
+                </all>
+            </complexType>
+            <complexType name="newseditArticleAttributeFrontendLabelArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:newseditArticleAttributeFrontendLabelEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="newseditArticleAttributeEntityToCreate">
+                <all>
+                    <element name="attribute_code" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="frontend_input" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="scope" type="xsd:string" minOccurs="0" />
+                    <element name="default_value" type="xsd:string" minOccurs="0" />
+                    <element name="is_required" type="xsd:int" minOccurs="0" />
+                    <element name="additional_fields" type="typens:associativeArray" minOccurs="0"/>
+                    <element name="frontend_label" type="typens:newseditArticleAttributeFrontendLabelArray" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="newseditArticleAttributeEntityToUpdate">
+                <all>
+                    <element name="scope" type="xsd:string" minOccurs="0" />
+                    <element name="default_value" type="xsd:string" minOccurs="0" />
+                    <element name="is_required" type="xsd:int" minOccurs="0" />
+                    <element name="additional_fields" type="typens:associativeArray" minOccurs="0"/>
+                    <element name="frontend_label" type="typens:newseditArticleAttributeFrontendLabelArray" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="newseditArticleAttributeEntity">
+                <all>
+                    <element name="attribute_id" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="attribute_code" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="frontend_input" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="scope" type="xsd:string" minOccurs="0" />
+                    <element name="default_value" type="xsd:string" minOccurs="0" />
+                    <element name="is_required" type="xsd:int" minOccurs="0" />
+                    <element name="additional_fields" type="typens:associativeArray" minOccurs="0"/>
+                    <element name="options" type="typens:newseditArticleAttributeOptionEntityArray" minOccurs="0"/>
+                    <element name="frontend_label" type="typens:newseditArticleAttributeFrontendLabelArray" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="newseditArticleAttributeOptionLabelEntity">
+                <all>
+                    <element name="store_id" type="typens:ArrayOfString" />
+                    <element name="value" type="xsd:string" />
+                </all>
+            </complexType>
+            <complexType name="newseditArticleAttributeOptionLabelArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:newseditArticleAttributeOptionLabelEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="newseditArticleAttributeOptionEntityToAdd">
+                <all>
+                    <element name="label" type="typens:newseditArticleAttributeOptionLabelArray" />
+                    <element name="order" type="xsd:int" />
+                    <element name="is_default" type="xsd:int" />
+                </all>
+            </complexType>
+            <complexType name="newseditSectionAdditionalAttributesEntity">
+                <all>
+                    <element name="multi_data" type="typens:associativeMultiArray" minOccurs="0" />
+                    <element name="single_data" type="typens:associativeArray" minOccurs="0" />
+                </all>
+            </complexType>
+            <complexType name="newseditSectionAttributeOptionEntity">
+                <all>
+                    <element name="label" type="xsd:string"/>
+                    <element name="value" type="xsd:string"/>
+                </all>
+            </complexType>
+            <complexType name="newseditSectionAttributeOptionEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:newseditSectionAttributeOptionEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="newseditSectionAttributeOptionLabelEntity">
+                <all>
+                    <element name="store_id" type="typens:ArrayOfString" />
+                    <element name="value" type="xsd:string" />
+                </all>
+            </complexType>
+            <complexType name="newseditSectionAttributeOptionLabelArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:newseditSectionAttributeOptionLabelEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="newseditSectionRequestAttributes">
+                <all>
+                    <element name="attributes" type="typens:ArrayOfString" minOccurs="0"/>
+                    <element name="additional_attributes" type="typens:ArrayOfString" minOccurs="0"/>
+                </all>
+            </complexType>
+            <complexType name="newseditSectionAttributeFrontendLabelEntity">
+                <all>
+                    <element name="store_id" type="xsd:string" />
+                    <element name="label" type="xsd:string" />
+                </all>
+            </complexType>
+            <complexType name="newseditSectionAttributeFrontendLabelArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:newseditSectionAttributeFrontendLabelEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="newseditSectionAttributeEntityToCreate">
+                <all>
+                    <element name="attribute_code" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="frontend_input" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="scope" type="xsd:string" minOccurs="0" />
+                    <element name="default_value" type="xsd:string" minOccurs="0" />
+                    <element name="is_required" type="xsd:int" minOccurs="0" />
+                    <element name="additional_fields" type="typens:associativeArray" minOccurs="0"/>
+                    <element name="frontend_label" type="typens:newseditSectionAttributeFrontendLabelArray" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="newseditSectionAttributeEntityToUpdate">
+                <all>
+                    <element name="scope" type="xsd:string" minOccurs="0" />
+                    <element name="default_value" type="xsd:string" minOccurs="0" />
+                    <element name="is_required" type="xsd:int" minOccurs="0" />
+                    <element name="additional_fields" type="typens:associativeArray" minOccurs="0"/>
+                    <element name="frontend_label" type="typens:newseditSectionAttributeFrontendLabelArray" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="newseditSectionAttributeEntity">
+                <all>
+                    <element name="attribute_id" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="attribute_code" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="frontend_input" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="scope" type="xsd:string" minOccurs="0" />
+                    <element name="default_value" type="xsd:string" minOccurs="0" />
+                    <element name="is_required" type="xsd:int" minOccurs="0" />
+                    <element name="additional_fields" type="typens:associativeArray" minOccurs="0"/>
+                    <element name="options" type="typens:newseditSectionAttributeOptionEntityArray" minOccurs="0"/>
+                    <element name="frontend_label" type="typens:newseditSectionAttributeFrontendLabelArray" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="newseditSectionAttributeOptionLabelEntity">
+                <all>
+                    <element name="store_id" type="typens:ArrayOfString" />
+                    <element name="value" type="xsd:string" />
+                </all>
+            </complexType>
+            <complexType name="newseditSectionAttributeOptionLabelArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:newseditSectionAttributeOptionLabelEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="newseditSectionAttributeOptionEntityToAdd">
+                <all>
+                    <element name="label" type="typens:newseditSectionAttributeOptionLabelArray" />
+                    <element name="order" type="xsd:int" />
+                    <element name="is_default" type="xsd:int" />
+                </all>
+            </complexType>
+        </schema>
+    </types>
+    <message name="newseditAuthorListRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="filters" type="typens:filters"/>
+    </message>
+    <message name="newseditAuthorListResponse">
+        <part name="result" type="typens:newseditAuthorListEntityArray" />
+    </message>
+    <message name="newseditAuthorInfoRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="authorId" type="xsd:string" />
+    </message>
+    <message name="newseditAuthorInfoResponse">
+        <part name="result" type="typens:newseditAuthorInfoEntity" />
+    </message>
+    <message name="newseditAuthorAddRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="data" type="typens:newseditAuthorAddEntity" />
+    </message>
+    <message name="newseditAuthorAddResponse">
+        <part name="result" type="xsd:int"/>
+    </message>
+    <message name="newseditAuthorUpdateRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="authorId" type="xsd:string" />
+        <part name="data" type="typens:newseditAuthorUpdateEntity" />
+    </message>
+    <message name="newseditAuthorUpdateResponse">
+        <part name="result" type="xsd:boolean" />
+    </message>
+    <message name="newseditAuthorRemoveRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="authorId" type="xsd:string" />
+    </message>
+    <message name="newseditAuthorRemoveResponse">
+        <part name="result" type="xsd:boolean" />
+    </message>
+        <message name="newseditArticleListRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="filters" type="typens:filters"/>
+    </message>
+    <message name="newseditArticleListResponse">
+        <part name="result" type="typens:newseditArticleListEntityArray" />
+    </message>
+    <message name="newseditArticleInfoRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="articleId" type="xsd:string" />
+    </message>
+    <message name="newseditArticleInfoResponse">
+        <part name="result" type="typens:newseditArticleInfoEntity" />
+    </message>
+    <message name="newseditArticleAddRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="data" type="typens:newseditArticleAddEntity" />
+    </message>
+    <message name="newseditArticleAddResponse">
+        <part name="result" type="xsd:int"/>
+    </message>
+    <message name="newseditArticleUpdateRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="articleId" type="xsd:string" />
+        <part name="data" type="typens:newseditArticleUpdateEntity" />
+    </message>
+    <message name="newseditArticleUpdateResponse">
+        <part name="result" type="xsd:boolean" />
+    </message>
+    <message name="newseditArticleRemoveRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="articleId" type="xsd:string" />
+    </message>
+    <message name="newseditArticleRemoveResponse">
+        <part name="result" type="xsd:boolean" />
+    </message>
+        <message name="newseditArticleAssignProductRequest">
+            <part name="sessionId" type="xsd:string" />
+            <part name="article_id" type="xsd:string" />
+            <part name="product_id" type="xsd:string" />
+            <part name="position" type="xsd:string" />
+        </message>
+        <message name="newseditArticleAssignProductResponse">
+            <part name="result" type="xsd:boolean" />
+        </message>
+        <message name="newseditArticleUnassignProductRequest">
+            <part name="session_id" type="xsd:string" />
+            <part name="article_id" type="xsd:string" />
+            <part name="product_id" type="xsd:string" />
+        </message>
+        <message name="newseditArticleUnassignProductResponse">
+            <part name="result" type="xsd:boolean" />
+        </message>
+        <message name="newseditArticleAssignCategoryRequest">
+            <part name="sessionId" type="xsd:string" />
+            <part name="article_id" type="xsd:string" />
+            <part name="category_id" type="xsd:string" />
+            <part name="position" type="xsd:string" />
+        </message>
+        <message name="newseditArticleAssignCategoryResponse">
+            <part name="result" type="xsd:boolean" />
+        </message>
+        <message name="newseditArticleUnassignCategoryRequest">
+            <part name="session_id" type="xsd:string" />
+            <part name="article_id" type="xsd:string" />
+            <part name="category_id" type="xsd:string" />
+        </message>
+        <message name="newseditArticleUnassignCategoryResponse">
+            <part name="result" type="xsd:boolean" />
+        </message>
+        <message name="newseditArticleAssignSectionRequest">
+            <part name="sessionId" type="xsd:string" />
+            <part name="article_id" type="xsd:string" />
+            <part name="section_id" type="xsd:string" />
+            <part name="position" type="xsd:string" />
+        </message>
+        <message name="newseditArticleAssignSectionResponse">
+            <part name="result" type="xsd:boolean" />
+        </message>
+        <message name="newseditArticleUnassignSectionRequest">
+            <part name="session_id" type="xsd:string" />
+            <part name="article_id" type="xsd:string" />
+            <part name="section_id" type="xsd:string" />
+        </message>
+        <message name="newseditArticleUnassignSectionResponse">
+            <part name="result" type="xsd:boolean" />
+        </message>
+        <message name="newseditSectionListRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="filters" type="typens:filters"/>
+    </message>
+    <message name="newseditSectionListResponse">
+        <part name="result" type="typens:newseditSectionListEntityArray" />
+    </mess

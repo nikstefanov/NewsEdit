@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Komaks_NewsEdit extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Komaks
+ * @package        Komaks_NewsEdit
+ * @copyright      Copyright (c) 2016
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <api2>
+        <resource_groups>
+            <komaks_newsedit translate="title" module="komaks_newsedit">
+                <title>NewsEdit</title>
+                <sort_order>120</sort_order>
+                <children>
+                    <komaks_newsedit_author translate="title" module="komaks_newsedit">
+                        <title>Author</title>
+                        <sort_order>0</sort_order>
+                    </komaks_newsedit_author>
+                    <komaks_newsedit_article translate="title" module="komaks_newsedit">
+                        <title>Article</title>
+                        <sort_order>10</sort_order>
+                    </komaks_newsedit_article>
+                    <komaks_newsedit_section translate="title" module="komaks_newsedit">
+                        <title>Section</title>
+                        <sort_order>20</sort_order>
+                    </komaks_newsedit_section>
+
+                </children>
+            </komaks_newsedit>
+        </resource_groups>
+        <resources>
+            <komaks_newsedit_author translate="title" module="komaks_newsedit">
+                <group>komaks_newsedit_author</group>
+                <model>komaks_newsedit/api2_author</model>
+                <working_model>komaks_newsedit/author</working_model>
+                <title>Author</title>
+                <sort_order>0</sort_order>
+                <privileges>
+                    <admin>
+                        <create>1</create>
+                        <retrieve>1</retrieve>
+                        <update>1</update>
+                        <delete>1</delete>
+                    </admin>
+                    <customer>
+                        <retrieve>1</retrieve>
+                    </customer>
+                    <guest>
+                        <retrieve>1</retrieve>
+                    </guest>
+                </privileges>
+                <attributes translate="entity_id name description email status url_key in_rss meta_title meta_keywords meta_description" module="komaks_newsedit">
+                    <entity_id>Id</entity_id>
+                    <name>Name</name>
+                    <description>Description</description>
+                    <email>Email</email>
+                    <status>Enabled</status>
+                    <url_key>URL key</url_key>
+                    <in_rss>In RSS</in_rss>
+                    <meta_title>Meta title</meta_title>
+                    <meta_keywords>Meta keywords</meta_keywords>
+                    <meta_description>Meta description</meta_description>
+                </attributes>
+                <routes>
+                    <route_entity>
+                        <route>/newsedit_authors/:id</route>
+                        <action_type>entity</action_type>
+                    </route_entity>
+                    <route_collection>
+                        <route>/newsedit_authors</route>
+                        <action_type>collection</action_type>
+                    </route_collection>
+                </routes>
+                <versions>1</versions>
+            </komaks_newsedit_author>
+            <komaks_newsedit_article translate="title" module="komaks_newsedit">
+                <group>komaks_newsedit_article</group>
+                <model>komaks_newsedit/api2_article</model>
+                <working_model>komaks_newsedit/article</working_model>
+                <title>Article</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <admin>
+                        <create>1</create>
+                        <retrieve>1</retrieve>
+                        <update>1</update>
+                        <delete>1</delete>
+                    </admin>
+                    <customer>
+                        <retrieve>1</retrieve>
+                    </customer>
+                    <guest>
+                        <retrieve>1</retrieve>
+                    </guest>
+                </privileges>
+                <attributes translate="entity_id title teaser content publication_date image status url_key in_rss meta_title meta_keywords meta_description allow_comment" module="komaks_newsedit">
+                    <entity_id>Id</entity_id>
+                    <title>Title</title>
+                    <teaser>Teaser</teaser>
+                    <content>Content</content>
+                    <publication_date>Publication date</publication_date>
+                    <image>Image</image>
+                    <status>Enabled</status>
+                    <url_key>URL key</url_key>
+                    <in_rss>In RSS</in_rss>
+                    <meta_title>Meta title</meta_title>
+                    <meta_keywords>Meta keywords</meta_keywords>
+                    <meta_description>Meta description</meta_description>
+                    <allow_comment>Allow Comment</allow_comment>
+                </attributes>
+                <routes>
+                    <route_entity>
+                        <route>/newsedit_articles/:id</route>
+                        <action_type>entity</action_type>
+                    </route_entity>
+                    <route_entity_with_store>
+                        <route>/newsedit_articles/:id/store/:store</route>
+                        <action_type>entity</action_type>
+                    </route_entity_with_store>
+                    <route_collection>
+                        <route>/newsedit_articles</route>
+                        <action_type>collection</action_type>
+                    </route_collection>
+                    <route_collection_with_store>
+                        <route>/newsedit_articles/store/:store</route>
+                        <action_type>collection</action_type>
+                    </route_collection_with_store>
+                </routes>
+                <versions>1</versions>
+            </komaks_newsedit_article>
+            <komaks_newsedit_section translate="title" module="komaks_newsedit">
+                <group>komaks_newsedit_section</group>
+                <model>komaks_newsedit/api2_section</model>
+                <working_model>komaks_newsedit/section</working_model>
+                <title>Section</title>
+                <sort_order>20</sort_order>
+                <privileges>
+                    <admin>
+                        <create>1</create>
+                        <retrieve>1</retrieve>
+                        <update>1</update>
+                        <delete>1</delete>
+                    </admin>
+                    <customer>
+                        <retrieve>1</retrieve>
+                    </customer>
+                    <guest>
+                        <retrieve>1</retrieve>
+                    </guest>
+                </privileges>
+                <attributes translate="entity_id name description status url_key parent_id path position level children_count in_rss meta_title meta_keywords meta_description allow_comment" module="komaks_newsedit">
+                    <entity_id>Id</entity_id>
+                    <name>Name</name>
+                    <description>Description</description>
+                    <status>Enabled</status>
+                    <url_key>URL key</url_key>
+                    <parent_id>Parent id</parent_id>
+                    <path>Path</path>
+                    <position>Position</position>
+                    <level>Level</level>
+                    <children_count>Children count</children_count>
+                    <in_rss>In RSS</in_rss>
+                    <meta_title>Meta title</meta_title>
+                    <meta_keywords>Meta keywords</meta_keywords>
+                    <meta_description>Meta description</meta_description>
+                    <allow_comment>Allow Comment</allow_comment>
+                </attributes>
+                <routes>
+                    <route_entity>
+                        <route>/newsedit_sections/:id</route>
+                        <action_type>entity</action_type>
+                    </route_entity>
+                    <route_entity_with_store>
+                        <route>/newsedit_sections/:id/store/:store</route>
+                        <action_type>entity</action_type>
+                    </route_entity_with_store>
+                    <route_collection>
+                        <route>/newsedit_sections</route>
+                        <action_type>collection</action_type>
+                    </route_collection>
+                    <route_collection_with_store>
+                        <route>/newsedit_sections/store/:store</route>
+                        <action_type>collection</action_type>
+                    </route_collection_with_store>
+                </routes>
+                <versions>1</versions>
+            </komaks_newsedit_section>
+
+        </resources>
+    </api2>
+</config>
